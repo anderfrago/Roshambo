@@ -9,9 +9,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class WebController {
 	
 	@GetMapping("/playgame")
-	public String playGame(//TODO Add request parameter choice String theChoice) {
+	public String playGame(@RequestParam(name="choice") String theChoice, Model model) {
 		
-		//TODO Add attribute to the model "yourChoice", theChoice
+		model.addAttribute("yourChoice", theChoice);
 		
 		return "results";		
 	}
