@@ -1,9 +1,12 @@
 package org.cuatrovientos.rps;
 
-//TODO Set the corresponding annotation
-class WebController {
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+
+@Controller
+public class WebController {
 	
-	// TODO Set the corresponding annotation
+	@GetMapping("/playgame")
 	public String playGame() {
 		
 		return "results";		
