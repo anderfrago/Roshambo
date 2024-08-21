@@ -20,7 +20,7 @@ public class WebController {
 			theOutcome = "loss";			
 		}
 		
-		// TODO Add attribute theOutcome
+		model.addAttribute("theOutCome", theOutcome);
 		model.addAttribute("yourChoice", theChoice);
 		
 		return "results";		
