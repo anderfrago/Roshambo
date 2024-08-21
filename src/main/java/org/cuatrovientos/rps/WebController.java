@@ -47,6 +47,8 @@ public class WebController {
 			theOutcome = "loss";			
 		}
 		
+		// TODO update view to set  values from score
+		
 		model.addAttribute("theOutcome", theOutcome);
 		model.addAttribute("yourChoice", theChoice);
 		
