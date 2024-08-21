@@ -30,6 +30,9 @@ public class WebController {
 	public String playGame(@RequestParam(name="choice") String theChoice, Model model) {
 		
 		// Logic considering that the computer always select rock
+		
+		// TODO Increase/decrease the value of score
+		
 		String theOutcome = "tie";
 		if(theChoice.equalsIgnoreCase("paper")) {
 			theOutcome = "win";			
