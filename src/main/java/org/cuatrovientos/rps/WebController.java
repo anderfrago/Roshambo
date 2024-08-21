@@ -31,13 +31,19 @@ public class WebController {
 		
 		// Logic considering that the computer always select rock
 		
-		// TODO Increase/decrease the value of score
+		Score score = this.getScore();
 		
 		String theOutcome = "tie";
+		if(theChoice.equalsIgnoreCase("rock")) {
+			score.setTies(score.getTies() + 1);
+			theOutcome = "tie";			
+		}
 		if(theChoice.equalsIgnoreCase("paper")) {
+			score.setWins(score.getWins() + 1);
 			theOutcome = "win";			
 		}
 		if(theChoice.equalsIgnoreCase("scissors")) {
+			score.setLosses(score.getLosses() + 1);
 			theOutcome = "loss";			
 		}
 		
