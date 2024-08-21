@@ -11,6 +11,16 @@ public class WebController {
 	@GetMapping("/playgame")
 	public String playGame(@RequestParam(name="choice") String theChoice, Model model) {
 		
+		// Logic considering that the computer always select rock
+		String theOutcome = "tie";
+		if(theChoice.equalsIgnoreCase("paper")) {
+			theOutcome = "win";			
+		}
+		if(theChoice.equalsIgnoreCase("scissors")) {
+			theOutcome = "loss";			
+		}
+		
+		// TODO Add attribute theOutcome
 		model.addAttribute("yourChoice", theChoice);
 		
 		return "results";		
